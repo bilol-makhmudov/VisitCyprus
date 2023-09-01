@@ -37,19 +37,19 @@ class _WhileLoadingScreenState extends State<WhileLoadingScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black.withOpacity(0.3),
+      backgroundColor: Colors.black,
       body: Center(
         child: Stack(
           alignment: Alignment.center,
           children: [
+            // Image.asset("assets/LOGOBLACK.png")
+
+            Image.asset("assets/innerCircle.png", fit: BoxFit.fill),
+
             RotationTransition(
               turns: _animationController,
               filterQuality: FilterQuality.high,
-              child: Image.asset("assets/outerCircle.png"),
-            ),
-            Image.asset(
-              "assets/innerCircle.png",
-              fit: BoxFit.fill,
+              child: Image.asset("assets/outerCircle.png", fit: BoxFit.fill),
             ),
           ],
         ),

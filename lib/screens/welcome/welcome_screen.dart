@@ -119,7 +119,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                         ),
                                       ),
                                       onPressed: () {
-                                        Navigator.pushNamed(context, "/home");
+                                        Navigator.pushNamed(context, "/map");
                                       },
                                       child: Padding(
                                         padding: const EdgeInsets.all(16.0),

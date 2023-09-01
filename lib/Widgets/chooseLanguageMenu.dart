@@ -33,7 +33,7 @@ class _ChooseLanguageMenuState extends State<ChooseLanguageMenu> {
             buildLanguageItem("English", "ukFlag.png"),
             buildLanguageItem("Türkçe", "turkeyFlag.png"),
             buildLanguageItem("O'zbekcha", "uzbekistanFlag.png"),
-            buildLanguageItem("Russian", "russiaFlag.jpg"),
+            buildLanguageItem("Russian", "russiaFlag.png"),
           ],
         ),
       ),
