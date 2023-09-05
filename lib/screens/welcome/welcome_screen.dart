@@ -34,7 +34,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
-    Future.delayed(Duration(milliseconds: 2000), () {
+    Future.delayed(Duration(milliseconds: 2500), () {
       setState(() {
         showLoadingPage = false;
       });
@@ -51,22 +51,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               ),
               child: Column(
                 children: [
-                  Stack(
-                    children: [
-                      Row(
-                        children: [
-                          Spacer(),
-                          ChooseLanguageMenu(chosenLanguageChanged:
-                              (String chosenLanguage, bool visibility) {
-                            setState(() {
-                              selectedLanguage = chosenLanguage;
-                              showChooseLanguageMenu = visibility;
-                            });
-                          }),
-                        ],
-                      ),
-                    ],
-                  ),
                   Spacer(),
                   Padding(
                     padding: const EdgeInsets.all(16.0),
@@ -94,7 +78,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                   color: Theme.of(context).primaryColorDark),
                             ),
                             Text(
-                              "Use the best travel guid to Turkish Republic of North Cyprus",
+                              "Use the best travel guide to Turkish Republic of North Cyprus",
                               style: TextStyle(
                                 color: Colors.blueGrey,
                                 fontSize: 18,

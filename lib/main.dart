@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:visit_cyprus/screens/welcome/welcome_screen.dart';
-import 'package:visit_cyprus/screens/whileLoading.dart';
 import 'config/app_router.dart';
 import 'config/theme.dart';
 
@@ -16,11 +16,21 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
       theme: theme(),
-      home: WelcomeScreen(),
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate
+      ],
+      supportedLocales: [
+        Locale('en', 'US'),
+        Locale('tr', 'TR'),
+        Locale('uz', 'UZ'),
+        Locale('ru', 'RU')
+      ],
       onGenerateRoute: AppRoute.onGenerateRoute,
       initialRoute: WelcomeScreen.routeName,
+      home: WelcomeScreen(),
     );
   }
 }
