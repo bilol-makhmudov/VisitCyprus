@@ -8,6 +8,7 @@ import 'package:visit_cyprus/screens/profile/profile_screen.dart';
 import 'package:visit_cyprus/screens/whileLoading.dart';
 
 import '../screens/home/home_screen.dart';
+import '../screens/tips/TipsScreen.dart';
 import '../screens/welcome/welcome_screen.dart';
 
 class AppRoute {
@@ -35,6 +36,9 @@ class AppRoute {
 
       case MapScreen.routeName:
         return MapScreen.route();
+
+      case TipsScreen.routeName:
+        return TipsScreen.route();
 
       case ProfileScreen.routeName:
         return ProfileScreen.route();

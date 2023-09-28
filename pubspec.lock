@@ -61,10 +61,10 @@ packages:
     dependency: transitive
     description:
       name: dio
-      sha256: ce75a1b40947fea0a0e16ce73337122a86762e38b982e1ccb909daa3b9bc4197
+      sha256: "417e2a6f9d83ab396ec38ff4ea5da6c254da71e4db765ad737a42af6930140b7"
       url: "https://pub.dev"
     source: hosted
-    version: "5.3.2"
+    version: "5.3.3"
   fake_async:
     dependency: transitive
     description:
@@ -103,10 +103,10 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_osm_plugin
-      sha256: b11d9ea895302c703778e17008d148ba34f407554028a9b35f6baeb117aa3a74
+      sha256: "813b06bc7bd2d205a247edfbf72026cb7b9adfdd29e9ee588cc88e8b75bbf3ff"
       url: "https://pub.dev"
     source: hosted
-    version: "0.60.4"
+    version: "0.60.5"
   flutter_osm_web:
     dependency: transitive
     description:
@@ -209,18 +209,18 @@ packages:
     dependency: transitive
     description:
       name: permission_handler
-      sha256: "63e5216aae014a72fe9579ccd027323395ce7a98271d9defa9d57320d001af81"
+      sha256: bc56bfe9d3f44c3c612d8d393bd9b174eb796d706759f9b495ac254e4294baa5
       url: "https://pub.dev"
     source: hosted
-    version: "10.4.3"
+    version: "10.4.5"
   permission_handler_android:
     dependency: transitive
     description:
       name: permission_handler_android
-      sha256: d74e77a5ecd38649905db0a7d05ef16bed42ff263b9efb73ed794317c5764ec3
+      sha256: "59c6322171c29df93a22d150ad95f3aa19ed86542eaec409ab2691b8f35f9a47"
       url: "https://pub.dev"
     source: hosted
-    version: "10.3.4"
+    version: "10.3.6"
   permission_handler_apple:
     dependency: transitive
     description:
@@ -233,10 +233,10 @@ packages:
     dependency: transitive
     description:
       name: permission_handler_platform_interface
-      sha256: "7c6b1500385dd1d2ca61bb89e2488ca178e274a69144d26bbd65e33eae7c02a9"
+      sha256: f2343e9fa9c22ae4fd92d4732755bfe452214e7189afcc097380950cf567b4b2
       url: "https://pub.dev"
     source: hosted
-    version: "3.11.3"
+    version: "3.11.5"
   permission_handler_windows:
     dependency: transitive
     description:
@@ -382,10 +382,10 @@ packages:
     dependency: transitive
     description:
       name: url_launcher_web
-      sha256: ba140138558fcc3eead51a1c42e92a9fb074a1b1149ed3c73e66035b2ccd94f2
+      sha256: "2942294a500b4fa0b918685aff406773ba0a4cd34b7f42198742a94083020ce5"
       url: "https://pub.dev"
     source: hosted
-    version: "2.0.19"
+    version: "2.0.20"
   url_launcher_windows:
     dependency: transitive
     description:
@@ -419,5 +419,5 @@ packages:
     source: hosted
     version: "0.1.4-beta"
 sdks:
-  dart: ">=3.1.0-185.0.dev <4.0.0"
-  flutter: ">=3.10.0"
+  dart: ">=3.1.0 <4.0.0"
+  flutter: ">=3.13.0"

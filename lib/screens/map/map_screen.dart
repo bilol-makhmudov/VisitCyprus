@@ -47,69 +47,67 @@ class _MapScreenState extends State<MapScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        children: [
-          GestureDetector(
-            onDoubleTap: () {},
-            child: OSMFlutter(
-                mapIsLoading: WhileLoadingScreen(),
-                controller: _mapController,
-                osmOption: OSMOption(
-                  userTrackingOption: UserTrackingOption(
-                    enableTracking: true,
-                    unFollowUser: false,
-                  ),
-                  zoomOption: ZoomOption(
-                    initZoom: 15,
-                    minZoomLevel: 8,
-                    maxZoomLevel: 19,
-                    stepZoom: 1.0,
-                  ),
-                  userLocationMarker: UserLocationMaker(
-                    personMarker: MarkerIcon(
-                      icon: Icon(
-                        Icons.location_history_rounded,
-                        color: Colors.red,
-                        size: currentZoom * 20,
-                      ),
-                    ),
-                    directionArrowMarker: MarkerIcon(
-                      icon: Icon(
-                        Icons.double_arrow,
-                        size: 1,
-                        color: Colors.transparent,
-                      ),
-                    ),
-                  ),
-                  roadConfiguration: RoadOption(
-                    roadColor: Colors.yellowAccent,
-                  ),
-                  markerOption: MarkerOption(
-                      defaultMarker: MarkerIcon(
+    return Stack(
+      children: [
+        GestureDetector(
+          onDoubleTap: () {},
+          child: OSMFlutter(
+              mapIsLoading: WhileLoadingScreen(),
+              controller: _mapController,
+              osmOption: OSMOption(
+                userTrackingOption: UserTrackingOption(
+                  enableTracking: true,
+                  unFollowUser: false,
+                ),
+                zoomOption: ZoomOption(
+                  initZoom: 15,
+                  minZoomLevel: 8,
+                  maxZoomLevel: 19,
+                  stepZoom: 1.0,
+                ),
+                userLocationMarker: UserLocationMaker(
+                  personMarker: MarkerIcon(
                     icon: Icon(
-                      Icons.person_pin_circle,
-                      color: Colors.blue,
-                      size: 56,
+                      Icons.location_history_rounded,
+                      color: Colors.red,
+                      size: currentZoom * 20,
                     ),
-                  )),
+                  ),
+                  directionArrowMarker: MarkerIcon(
+                    icon: Icon(
+                      Icons.double_arrow,
+                      size: 1,
+                      color: Colors.transparent,
+                    ),
+                  ),
+                ),
+                roadConfiguration: RoadOption(
+                  roadColor: Colors.yellowAccent,
+                ),
+                markerOption: MarkerOption(
+                    defaultMarker: MarkerIcon(
+                  icon: Icon(
+                    Icons.person_pin_circle,
+                    color: Colors.blue,
+                    size: 56,
+                  ),
                 )),
-          ),
-          Align(
-            alignment: Alignment.bottomRight,
-            child: IconButton(
-                padding: EdgeInsets.all(16),
-                onPressed: () async {
-                  var myLoc = await _mapController.myLocation();
-                  await _mapController.currentLocation();
-                },
-                icon: Icon(
-                  Icons.my_location,
-                  size: 30,
-                )),
-          )
-        ],
-      ),
+              )),
+        ),
+        Align(
+          alignment: Alignment.bottomRight,
+          child: IconButton(
+              padding: EdgeInsets.all(16),
+              onPressed: () async {
+                var myLoc = await _mapController.myLocation();
+                await _mapController.currentLocation();
+              },
+              icon: Icon(
+                Icons.my_location,
+                size: 30,
+              )),
+        )
+      ],
     );
   }
 }
